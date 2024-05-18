@@ -47,6 +47,25 @@ model Media {
   updatedAt       DateTime              @updatedAt
 }
 
+model VideoStream {
+  createdAt    DateTime               @default(now())
+  id           String                 @id @default(cuid())
+  sourceDevice String?
+  status       EnumVideoStreamStatus?
+  streamId     String?
+  targetDevice String?
+  updatedAt    DateTime               @updatedAt
+}
+
+model Device {
+  createdAt  DateTime              @default(now())
+  deviceName String?
+  deviceType EnumDeviceDeviceType?
+  id         String                @id @default(cuid())
+  status     EnumDeviceStatus?
+  updatedAt  DateTime              @updatedAt
+}
+
 enum EnumSessionMode {
   Option1
 }
@@ -56,5 +75,17 @@ enum EnumMediaMediaType {
 }
 
 enum EnumMediaTypeOfMedia {
+  Option1
+}
+
+enum EnumVideoStreamStatus {
+  Option1
+}
+
+enum EnumDeviceDeviceType {
+  Option1
+}
+
+enum EnumDeviceStatus {
   Option1
 }

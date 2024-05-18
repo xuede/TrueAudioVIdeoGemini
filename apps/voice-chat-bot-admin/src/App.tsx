@@ -17,6 +17,14 @@ import { MediaList } from "./media/MediaList";
 import { MediaCreate } from "./media/MediaCreate";
 import { MediaEdit } from "./media/MediaEdit";
 import { MediaShow } from "./media/MediaShow";
+import { VideoStreamList } from "./videoStream/VideoStreamList";
+import { VideoStreamCreate } from "./videoStream/VideoStreamCreate";
+import { VideoStreamEdit } from "./videoStream/VideoStreamEdit";
+import { VideoStreamShow } from "./videoStream/VideoStreamShow";
+import { DeviceList } from "./device/DeviceList";
+import { DeviceCreate } from "./device/DeviceCreate";
+import { DeviceEdit } from "./device/DeviceEdit";
+import { DeviceShow } from "./device/DeviceShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -63,6 +71,20 @@ const App = (): React.ReactElement => {
           edit={MediaEdit}
           create={MediaCreate}
           show={MediaShow}
+        />
+        <Resource
+          name="VideoStream"
+          list={VideoStreamList}
+          edit={VideoStreamEdit}
+          create={VideoStreamCreate}
+          show={VideoStreamShow}
+        />
+        <Resource
+          name="Device"
+          list={DeviceList}
+          edit={DeviceEdit}
+          create={DeviceCreate}
+          show={DeviceShow}
         />
       </Admin>
     </div>

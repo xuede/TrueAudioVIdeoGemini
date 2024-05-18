@@ -2,6 +2,10 @@ import { Module } from "@nestjs/common";
 import { SessionModule } from "./session/session.module";
 import { UserModule } from "./user/user.module";
 import { MediaModule } from "./media/media.module";
+import { VideoStreamModule } from "./videoStream/videoStream.module";
+import { DeviceModule } from "./device/device.module";
+import { DeviceModuleModule } from "./DeviceModule/devicemodule.module";
+import { VideoModuleModule } from "./VideoModule/videomodule.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -17,6 +21,10 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
     SessionModule,
     UserModule,
     MediaModule,
+    VideoStreamModule,
+    DeviceModule,
+    DeviceModuleModule,
+    VideoModuleModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
